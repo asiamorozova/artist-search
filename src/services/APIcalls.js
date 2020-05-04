@@ -1,5 +1,5 @@
 export const fetchArtistData = (searchedArtist) => {
-  return fetch(`http://musicbrainz.org/ws/2/release?artist=${searchedArtist}&fmt=json`)
+  return fetch(`http://musicbrainz.org/ws/2/artist?query=${searchedArtist}&fmt=json&limit=20`   )
     .then(res => res.json())
     .then(json => json.artists.map(artist => ({
       artistId: artist.id,
@@ -9,6 +9,7 @@ export const fetchArtistData = (searchedArtist) => {
     })))
     .catch(err => console.log(err));
 };
+
   
 export const fetchReleaseData = (artistId) => {
   return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`)
