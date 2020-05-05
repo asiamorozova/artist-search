@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Artist from '../components/Artist/Artist';
+import Artist from '../Artist/Artist';
 import { Link } from 'react-router-dom';
 
 const ArtistList = ({ artists }) => {

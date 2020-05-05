@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlbumList = ({ name, albums }) => (
+const Albums = ({ name, albums }) => (
 
   <figure style={{ margin: '1em' }}>
     <section>
@@ -18,7 +18,7 @@ const AlbumList = ({ name, albums }) => (
    
 );
 
-AlbumList.propTypes = {
+Albums.propTypes = {
   artist: PropTypes.string.isRequired,
   albums: PropTypes.string.isRequired,
   followers: PropTypes.number.isRequired,

@@ -5,9 +5,9 @@ import {
   Switch,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import ArtistSearch from '../ArtistSearch.jsx';
-import Artist from '../Artist.jsx';
-import ArtistDisplay from '../../container/ArtistDisplay.jsx';
+//import ArtistSearch from '../ArtistSearch/ArtistSearch';
+import Artist from '../Artist/Artist';
+import ArtistDisplay from '../../containers/ArtistDisplay';
 
 export default function App() {
   return (
