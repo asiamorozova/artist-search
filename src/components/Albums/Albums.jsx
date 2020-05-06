@@ -25,4 +25,4 @@ Albums.propTypes = {
   following: PropTypes.number.isRequired,
   profileUrl: PropTypes.string.isRequired
 };
-export default AlbumList;
+export default Albums;
