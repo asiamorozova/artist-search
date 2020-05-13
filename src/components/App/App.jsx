@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import ArtistDisplay from '../../containers/ArtistDisplay';
 import AlbumDisplay from '../../containers/AlbumsContainer';
+import SearchSong from '../../containers/SearchSong';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Switch>
           <Route exact path='/' component={ArtistDisplay}/>
           <Route exact path='/artist/:id' component={AlbumDisplay}/>  
+          <Route exact path='/Songs/:albumId' component={SearchSong} />
           
         </Switch>
       </Router>
