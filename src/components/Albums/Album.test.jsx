@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Album from './Album.js';
+import Album from '../Albums/Album';
 
 describe('Album', () => {
   it('matches a snapshot', () => {
