@@ -1,28 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Album from '../Albums/Album';
+import { Link } from 'react-router-dom';
 
-const Albums = ({ name, albums }) => (
+const Albums = ({ albums }) => {
+  const albumsList = albums.map(album => (
+    <Link to={`/songs/${album.id}`} key={album.id}>
+      <li>
+        <Album {...album}/>
+      </li>
+    </Link>
+  ));
 
-  <figure style={{ margin: '1em' }}>
-    <section>
-      <img alt={username} style={{ width: '25%' }} src={image} />
-      <div style={{ fontWeight: 'bold' }}>
-        <h3>Name: {name} </h3>
-        <ul>
-          {albums}
-        </ul>
-        <a href={albumUrl} target="_blank" rel="noopener noreferrer">Albums</a>
-      </div>
-    </section>
-  </figure>
+  return (
+    <ul>
+      {albumsList}
+    </ul>
+  );
+};
    
-);
+
 
 Albums.propTypes = {
-  artist: PropTypes.string.isRequired,
-  albums: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  following: PropTypes.number.isRequired,
-  profileUrl: PropTypes.string.isRequired
+  albums: PropTypes.arrayOf(PropTypes.shape({
+    artist: PropTypes.string.isRequired,
+    albums: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    following: PropTypes.number.isRequired,
+    profileUrl: PropTypes.string.isRequired
+  })).isRequired
 };
+
 export default Albums;
