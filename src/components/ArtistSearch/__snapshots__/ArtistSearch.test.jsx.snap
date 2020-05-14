@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls component renders App 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    type="text"
+  />
+  <button>
+    Find Groovy Music
+  </button>
+</form>
+`;
